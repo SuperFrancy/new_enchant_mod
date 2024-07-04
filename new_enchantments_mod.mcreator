@@ -1,0 +1,93 @@
+{
+  "mod_elements": [
+    {
+      "name": "Smelting",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smelting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/SmeltingEnchantment.java"
+        ]
+      },
+      "path": "~/Enchant"
+    },
+    {
+      "name": "SmeltingP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smelting_p",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/procedures/SmeltingPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedure"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "language_map": {
+    "en_us": {
+      "enchantment.new_enchantments_mod.smelting": "Smelting"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Enchant",
+        "children": []
+      },
+      {
+        "name": "Procedure",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "new_enchantments_mod",
+    "modName": "New Enchantments Mod",
+    "version": "1.0.0",
+    "author": "Francesco, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.20.4",
+    "modElementsPackage": "net.mcreator.newenchantmentsmod"
+  },
+  "mcreatorVersion": 202400118518
+}
