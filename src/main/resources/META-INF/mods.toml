@@ -27,5 +27,17 @@ authors="Francesco, MCreator"
     ordering="NONE"
     side="BOTH"
 
+[[dependencies.new_enchantments_mod]]
+    modId="mcreator_link"
+    type="required"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
+[[dependencies.new_enchantments_mod]]
+    modId="jei"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

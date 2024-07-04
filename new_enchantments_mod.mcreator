@@ -85,8 +85,12 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "mcreator_link",
+      "jei"
+    ],
     "currentGenerator": "neoforge-1.20.4",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.newenchantmentsmod"
   },
   "mcreatorVersion": 202400118518
