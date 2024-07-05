@@ -14,11 +14,7 @@
       }
     ],
     "excludeEnchantments": true,
-    "compatibleItems": [
-      {
-        "value": "TAG:minecraft:axes"
-      }
-    ],
+    "compatibleItems": [],
     "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,

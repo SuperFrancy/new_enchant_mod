@@ -111,7 +111,16 @@
         "files": [
           "src/main/java/net/mcreator/newenchantmentsmod/procedures/IceAspectPProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Procedure"
     }
@@ -123,7 +132,7 @@
     "it_it": {
       "enchantment.new_enchantments_mod.breaking_curse": "Maledizione della rottura",
       "enchantment.new_enchantments_mod.smelting": "Fusione",
-      "enchantment.new_enchantments_mod.ice_aspect": "Ice Aspect"
+      "enchantment.new_enchantments_mod.ice_aspect": "Aspetto di ghiaccio"
     },
     "en_us": {
       "enchantment.new_enchantments_mod.breaking_curse": "Curse of Breaking",
