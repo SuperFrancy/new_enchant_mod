@@ -51,14 +51,70 @@
         ]
       },
       "path": "~/Procedure"
+    },
+    {
+      "name": "BreakingCurse",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "breaking_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/BreakingCurseEnchantment.java"
+        ]
+      },
+      "path": "~/Enchant"
+    },
+    {
+      "name": "BreakingCurseP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "breaking_curse_p",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/procedures/BreakingCursePProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procedure"
+    },
+    {
+      "name": "IceAspect",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_aspect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/IceAspectEnchantment.java"
+        ]
+      },
+      "path": "~/Enchant"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
   "language_map": {
+    "it_it": {
+      "enchantment.new_enchantments_mod.breaking_curse": "Maledizione della rottura",
+      "enchantment.new_enchantments_mod.smelting": "Fusione",
+      "enchantment.new_enchantments_mod.ice_aspect": "Ice Aspect"
+    },
     "en_us": {
-      "enchantment.new_enchantments_mod.smelting": "Smelting"
+      "enchantment.new_enchantments_mod.breaking_curse": "Curse of Breaking",
+      "enchantment.new_enchantments_mod.smelting": "Smelting",
+      "enchantment.new_enchantments_mod.ice_aspect": "Ice Aspect"
     }
   },
   "foldersRoot": {
