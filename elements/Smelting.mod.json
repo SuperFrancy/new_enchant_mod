@@ -10,10 +10,10 @@
     "damageModifier": 0,
     "compatibleEnchantments": [
       {
-        "value": "SILK_TOUCH"
+        "value": "FORTUNE"
       },
       {
-        "value": "FORTUNE"
+        "value": "SILK_TOUCH"
       }
     ],
     "excludeEnchantments": true,

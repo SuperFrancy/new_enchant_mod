@@ -1,19 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "Smelting",
-      "type": "enchantment",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "smelting",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/SmeltingEnchantment.java"
-        ]
-      },
-      "path": "~/Enchant"
-    },
-    {
       "name": "SmeltingP",
       "type": "procedure",
       "compiles": true,
@@ -53,19 +40,6 @@
       "path": "~/Procedure"
     },
     {
-      "name": "BreakingCurse",
-      "type": "enchantment",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "breaking_curse",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/BreakingCurseEnchantment.java"
-        ]
-      },
-      "path": "~/Enchant"
-    },
-    {
       "name": "BreakingCurseP",
       "type": "procedure",
       "compiles": true,
@@ -89,19 +63,6 @@
       "path": "~/Procedure"
     },
     {
-      "name": "IceAspect",
-      "type": "enchantment",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ice_aspect",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/IceAspectEnchantment.java"
-        ]
-      },
-      "path": "~/Enchant"
-    },
-    {
       "name": "IceAspectP",
       "type": "procedure",
       "compiles": true,
@@ -123,6 +84,128 @@
         ]
       },
       "path": "~/Procedure"
+    },
+    {
+      "name": "NothingCurseP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nothing_curse_p",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/procedures/NothingCursePProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedure"
+    },
+    {
+      "name": "NothingCurseP2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nothing_curse_p_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/procedures/NothingCurseP2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedure"
+    },
+    {
+      "name": "Smelting",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smelting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/SmeltingEnchantment.java"
+        ]
+      },
+      "path": "~/Enchant"
+    },
+    {
+      "name": "BreakingCurse",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "breaking_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/BreakingCurseEnchantment.java"
+        ]
+      },
+      "path": "~/Enchant"
+    },
+    {
+      "name": "IceAscpect",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_ascpect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/IceAscpectEnchantment.java"
+        ]
+      },
+      "path": "~/Enchant"
+    },
+    {
+      "name": "NothingCurse",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nothing_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/NothingCurseEnchantment.java"
+        ]
+      },
+      "path": "~/Enchant"
     }
   ],
   "variable_elements": [],
@@ -131,12 +214,16 @@
   "language_map": {
     "it_it": {
       "enchantment.new_enchantments_mod.breaking_curse": "Maledizione della rottura",
-      "enchantment.new_enchantments_mod.smelting": "Fusione",
+      "enchantment.new_enchantments_mod.smelting": "Smelting",
+      "enchantment.new_enchantments_mod.ice_ascpect": "Ice Ascpect",
+      "enchantment.new_enchantments_mod.nothing_curse": "Maledizione del nulla",
       "enchantment.new_enchantments_mod.ice_aspect": "Aspetto di ghiaccio"
     },
     "en_us": {
-      "enchantment.new_enchantments_mod.breaking_curse": "Curse of Breaking",
+      "enchantment.new_enchantments_mod.breaking_curse": "Breaking Curse",
       "enchantment.new_enchantments_mod.smelting": "Smelting",
+      "enchantment.new_enchantments_mod.ice_ascpect": "Ice Aspect",
+      "enchantment.new_enchantments_mod.nothing_curse": "Nothing Curse",
       "enchantment.new_enchantments_mod.ice_aspect": "Ice Aspect"
     }
   },

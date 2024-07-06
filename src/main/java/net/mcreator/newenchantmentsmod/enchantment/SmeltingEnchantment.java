@@ -15,6 +15,6 @@ public class SmeltingEnchantment extends Enchantment {
 
 	@Override
 	protected boolean checkCompatibility(Enchantment ench) {
-		return this != ench && !List.of(Enchantments.SILK_TOUCH, Enchantments.BLOCK_FORTUNE).contains(ench);
+		return this != ench && !List.of(Enchantments.BLOCK_FORTUNE, Enchantments.SILK_TOUCH).contains(ench);
 	}
 }

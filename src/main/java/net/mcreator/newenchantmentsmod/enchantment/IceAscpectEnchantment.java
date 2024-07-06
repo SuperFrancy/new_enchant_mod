@@ -8,8 +8,8 @@ import net.minecraft.world.entity.EquipmentSlot;
 
 import java.util.List;
 
-public class IceAspectEnchantment extends Enchantment {
-	public IceAspectEnchantment(EquipmentSlot... slots) {
+public class IceAscpectEnchantment extends Enchantment {
+	public IceAscpectEnchantment(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.RARE, EnchantmentCategory.WEAPON, slots);
 	}
 

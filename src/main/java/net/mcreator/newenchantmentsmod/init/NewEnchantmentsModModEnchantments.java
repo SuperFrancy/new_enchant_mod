@@ -11,7 +11,8 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.core.registries.Registries;
 
 import net.mcreator.newenchantmentsmod.enchantment.SmeltingEnchantment;
-import net.mcreator.newenchantmentsmod.enchantment.IceAspectEnchantment;
+import net.mcreator.newenchantmentsmod.enchantment.NothingCurseEnchantment;
+import net.mcreator.newenchantmentsmod.enchantment.IceAscpectEnchantment;
 import net.mcreator.newenchantmentsmod.enchantment.BreakingCurseEnchantment;
 import net.mcreator.newenchantmentsmod.NewEnchantmentsModMod;
 
@@ -19,5 +20,6 @@ public class NewEnchantmentsModModEnchantments {
 	public static final DeferredRegister<Enchantment> REGISTRY = DeferredRegister.create(Registries.ENCHANTMENT, NewEnchantmentsModMod.MODID);
 	public static final DeferredHolder<Enchantment, Enchantment> SMELTING = REGISTRY.register("smelting", () -> new SmeltingEnchantment());
 	public static final DeferredHolder<Enchantment, Enchantment> BREAKING_CURSE = REGISTRY.register("breaking_curse", () -> new BreakingCurseEnchantment());
-	public static final DeferredHolder<Enchantment, Enchantment> ICE_ASPECT = REGISTRY.register("ice_aspect", () -> new IceAspectEnchantment());
+	public static final DeferredHolder<Enchantment, Enchantment> ICE_ASCPECT = REGISTRY.register("ice_ascpect", () -> new IceAscpectEnchantment());
+	public static final DeferredHolder<Enchantment, Enchantment> NOTHING_CURSE = REGISTRY.register("nothing_curse", () -> new NothingCurseEnchantment());
 }
