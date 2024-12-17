@@ -37,7 +37,7 @@
           }
         ]
       },
-      "path": "~/Procedure"
+      "path": "~/Procedure/Enchant"
     },
     {
       "name": "BreakingCurseP",
@@ -57,10 +57,14 @@
           {
             "name": "amount",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Procedure"
+      "path": "~/Procedure/Curse"
     },
     {
       "name": "IceAspectP",
@@ -74,16 +78,28 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           },
           {
-            "name": "sourceentity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Procedure"
+      "path": "~/Procedure/Enchant"
     },
     {
       "name": "NothingCurseP",
@@ -118,42 +134,7 @@
           }
         ]
       },
-      "path": "~/Procedure"
-    },
-    {
-      "name": "NothingCurseP2",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nothing_curse_p_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/newenchantmentsmod/procedures/NothingCurseP2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedure"
+      "path": "~/Procedure/Curse"
     },
     {
       "name": "Smelting",
@@ -163,7 +144,7 @@
       "registry_name": "smelting",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/SmeltingEnchantment.java"
+          "src/main/resources/data/new_enchantments_mod/enchantment/smelting.json"
         ]
       },
       "path": "~/Enchant"
@@ -176,23 +157,10 @@
       "registry_name": "breaking_curse",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/BreakingCurseEnchantment.java"
+          "src/main/resources/data/new_enchantments_mod/enchantment/breaking_curse.json"
         ]
       },
-      "path": "~/Enchant"
-    },
-    {
-      "name": "IceAscpect",
-      "type": "enchantment",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ice_ascpect",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/IceAscpectEnchantment.java"
-        ]
-      },
-      "path": "~/Enchant"
+      "path": "~/Curse"
     },
     {
       "name": "NothingCurse",
@@ -202,7 +170,20 @@
       "registry_name": "nothing_curse",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/newenchantmentsmod/enchantment/NothingCurseEnchantment.java"
+          "src/main/resources/data/new_enchantments_mod/enchantment/nothing_curse.json"
+        ]
+      },
+      "path": "~/Curse"
+    },
+    {
+      "name": "IceAspect",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_aspect",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/new_enchantments_mod/enchantment/ice_aspect.json"
         ]
       },
       "path": "~/Enchant"
@@ -210,19 +191,41 @@
   ],
   "variable_elements": [],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "ENCHANTMENTS:minecraft:curse": [
+      "~CUSTOM:NothingCurse",
+      "~CUSTOM:BreakingCurse"
+    ],
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:IceAspect",
+      "~CUSTOM:Smelting"
+    ],
+    "ENCHANTMENTS:minecraft:treasure": [
+      "~CUSTOM:NothingCurse",
+      "~CUSTOM:BreakingCurse"
+    ],
+    "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:IceAspect",
+      "~CUSTOM:NothingCurse",
+      "~CUSTOM:BreakingCurse",
+      "~CUSTOM:Smelting"
+    ],
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:IceAspect",
+      "~CUSTOM:Smelting"
+    ]
+  },
+  "tab_element_order": {},
   "language_map": {
     "it_it": {
       "enchantment.new_enchantments_mod.breaking_curse": "Maledizione della rottura",
-      "enchantment.new_enchantments_mod.smelting": "Smelting",
-      "enchantment.new_enchantments_mod.ice_ascpect": "Ice Ascpect",
+      "enchantment.new_enchantments_mod.smelting": "Fusione",
       "enchantment.new_enchantments_mod.nothing_curse": "Maledizione del nulla",
       "enchantment.new_enchantments_mod.ice_aspect": "Aspetto di ghiaccio"
     },
     "en_us": {
       "enchantment.new_enchantments_mod.breaking_curse": "Breaking Curse",
       "enchantment.new_enchantments_mod.smelting": "Smelting",
-      "enchantment.new_enchantments_mod.ice_ascpect": "Ice Aspect",
       "enchantment.new_enchantments_mod.nothing_curse": "Nothing Curse",
       "enchantment.new_enchantments_mod.ice_aspect": "Ice Aspect"
     }
@@ -235,8 +238,21 @@
         "children": []
       },
       {
-        "name": "Procedure",
+        "name": "Curse",
         "children": []
+      },
+      {
+        "name": "Procedure",
+        "children": [
+          {
+            "name": "Curse",
+            "children": []
+          },
+          {
+            "name": "Enchant",
+            "children": []
+          }
+        ]
       }
     ]
   },
@@ -255,9 +271,9 @@
       "mcreator_link",
       "jei"
     ],
-    "currentGenerator": "neoforge-1.20.4",
+    "currentGenerator": "neoforge-1.21.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.newenchantmentsmod"
   },
-  "mcreatorVersion": 202400118518
+  "mcreatorVersion": 202400342716
 }

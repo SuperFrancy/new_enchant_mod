@@ -1,14 +1,14 @@
 {
-  "_fv": 60,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Smelting",
-    "type": "DIGGER",
-    "rarity": "UNCOMMON",
-    "minLevel": 1,
+    "supportedSlots": "mainhand",
+    "weight": 5,
+    "anvilCost": 2,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [
+    "incompatibleEnchantments": [
       {
         "value": "FORTUNE"
       },
@@ -16,12 +16,13 @@
         "value": "SILK_TOUCH"
       }
     ],
-    "excludeEnchantments": true,
-    "compatibleItems": [],
-    "excludeItems": false,
+    "supportedItems": [
+      {
+        "value": "TAG:enchantable/mining"
+      }
+    ],
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

@@ -1,14 +1,14 @@
 {
-  "_fv": 60,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Nothing Curse",
-    "type": "DIGGER",
-    "rarity": "UNCOMMON",
-    "minLevel": 1,
+    "supportedSlots": "mainhand",
+    "weight": 5,
+    "anvilCost": 2,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [
+    "incompatibleEnchantments": [
       {
         "value": "FORTUNE"
       },
@@ -17,30 +17,18 @@
       },
       {
         "value": "LOOTING"
+      },
+      {
+        "value": "CUSTOM:Smelting"
       }
     ],
-    "excludeEnchantments": true,
-    "compatibleItems": [
+    "supportedItems": [
       {
-        "value": "TAG:minecraft:axes"
-      },
-      {
-        "value": "TAG:minecraft:pickaxes"
-      },
-      {
-        "value": "TAG:minecraft:shovels"
-      },
-      {
-        "value": "TAG:minecraft:hoes"
-      },
-      {
-        "value": "TAG:minecraft:swors"
+        "value": "TAG:enchantable/mining"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": true,
     "isCurse": true,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": false
   }

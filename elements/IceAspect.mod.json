@@ -1,24 +1,25 @@
 {
-  "_fv": 60,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Ice Aspect",
-    "type": "WEAPON",
-    "rarity": "RARE",
-    "minLevel": 1,
+    "supportedSlots": "mainhand",
+    "weight": 2,
+    "anvilCost": 4,
     "maxLevel": 2,
     "damageModifier": 0,
-    "compatibleEnchantments": [
+    "incompatibleEnchantments": [
       {
         "value": "FIRE_ASPECT"
       }
     ],
-    "excludeEnchantments": true,
-    "compatibleItems": [],
-    "excludeItems": false,
+    "supportedItems": [
+      {
+        "value": "TAG:enchantable/weapon"
+      }
+    ],
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

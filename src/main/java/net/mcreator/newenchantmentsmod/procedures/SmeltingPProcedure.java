@@ -1,7 +1,7 @@
 package net.mcreator.newenchantmentsmod.procedures;
 
 import net.neoforged.neoforge.event.level.BlockEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -20,15 +19,15 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.newenchantmentsmod.init.NewEnchantmentsModModEnchantments;
-
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class SmeltingPProcedure {
 	@SubscribeEvent
 	public static void onBlockBreak(BlockEvent.BreakEvent event) {
@@ -45,17 +44,19 @@ public class SmeltingPProcedure {
 		double cx = 0;
 		double cy = 0;
 		double cz = 0;
-		if (EnchantmentHelper.getItemEnchantmentLevel(NewEnchantmentsModModEnchantments.SMELTING.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0 && !(new Object() {
-			public boolean checkGamemode(Entity _ent) {
-				if (_ent instanceof ServerPlayer _serverPlayer) {
-					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
-				}
-				return false;
-			}
-		}.checkGamemode(entity))) {
-			if (blockstate.is(BlockTags.create(new ResourceLocation("minecraft:logs")))) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+				.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("new_enchantments_mod:smelting")))) != 0 && !(new Object() {
+					public boolean checkGamemode(Entity _ent) {
+						if (_ent instanceof ServerPlayer _serverPlayer) {
+							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
+						}
+						return false;
+					}
+				}.checkGamemode(entity))) {
+			if (blockstate.is(BlockTags.create(ResourceLocation.parse("minecraft:logs")))) {
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.CHARCOAL));
@@ -64,7 +65,7 @@ public class SmeltingPProcedure {
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, x, y, z, 5, 1, 1, 1, 1);
-			} else if (blockstate.is(BlockTags.create(new ResourceLocation("minecraft:gold_ores")))) {
+			} else if (blockstate.is(BlockTags.create(ResourceLocation.parse("minecraft:gold_ores")))) {
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.GOLD_INGOT));
@@ -82,7 +83,7 @@ public class SmeltingPProcedure {
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, x, y, z, 5, 1, 1, 1, 1);
-			} else if (blockstate.is(BlockTags.create(new ResourceLocation("minecraft:iron_ores")))) {
+			} else if (blockstate.is(BlockTags.create(ResourceLocation.parse("minecraft:iron_ores")))) {
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.IRON_INGOT));
@@ -100,7 +101,7 @@ public class SmeltingPProcedure {
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, x, y, z, 5, 1, 1, 1, 1);
-			} else if (blockstate.is(BlockTags.create(new ResourceLocation("minecraft:copper_ores")))) {
+			} else if (blockstate.is(BlockTags.create(ResourceLocation.parse("minecraft:copper_ores")))) {
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.COPPER_INGOT));
@@ -127,7 +128,7 @@ public class SmeltingPProcedure {
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, x, y, z, 5, 1, 1, 1, 1);
-			} else if (blockstate.is(BlockTags.create(new ResourceLocation("minecraft:sand")))) {
+			} else if (blockstate.is(BlockTags.create(ResourceLocation.parse("minecraft:sand")))) {
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Blocks.GLASS));
